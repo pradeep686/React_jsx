@@ -4,6 +4,8 @@ import Apple from './leranClass'
 
 //send like a arguments brand
 function Garage(){
+
+
     const brand = 'Punch EV';
     //const color = 'black';
 
@@ -19,6 +21,7 @@ function Garage(){
         1,2,3,4,5,6
     ]
 
+    
     return (
         <>
         <h3>Best and compact segment</h3>

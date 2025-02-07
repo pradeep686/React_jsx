@@ -20,7 +20,6 @@ function Timer(){
     },[count])
 
 
-
     function maxCount(){
         if(count>10){
             setCount(1);
@@ -66,5 +65,7 @@ function Timer(){
     </>
 
 }
+
+
 
 export default Timer;

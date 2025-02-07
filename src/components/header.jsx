@@ -1,7 +1,7 @@
 import './header.css'
 
 function Header(){
-
+    
     const myStyle = {
     color: "white", 
     backgroundColor: "black",

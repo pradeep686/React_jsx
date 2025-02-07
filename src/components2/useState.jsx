@@ -1,12 +1,15 @@
 import {useState} from "react";
 
 function Colour(){
+
+    
     //let color = "orange";
     const [color, setColor] =useState('orange')
     //const [state, setState] = useState(initialValue);
     //state → Current value of the state
     //setState → Function to update the state
     //initialValue → Starting value of the state
+
 
 
     return <>

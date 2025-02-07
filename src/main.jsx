@@ -6,6 +6,9 @@ import Garage from './components/garage'
 import App from './App.jsx'
 import Header from './components/header.jsx'
 import Colour from './components2/useState.jsx'
+import Bick from './components2/bick.jsx'
+import List from './components2/list.jsx'
+import Timer from './components3/useEffect.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -18,5 +21,8 @@ createRoot(document.getElementById('root')).render(
     <Garage/> 
     <Header/>
     <Colour/>
+    <Bick/>
+    <List/>
+    <Timer/>
   </StrictMode>
 )

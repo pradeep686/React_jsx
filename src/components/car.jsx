@@ -2,7 +2,6 @@ function Car(props){
     const {brand,color,info} = props;//props -- properties in js
     const text = `Hi,I am a ${color} ${brand} car `;
 
-
     const {price,model,rating} = info;
     const details = `Extra Info: Price - ${price}, Model - ${model}, Rating - ${rating}`;
 

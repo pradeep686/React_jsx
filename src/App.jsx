@@ -26,9 +26,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
 
-      <Header /> {/* Common header for navigation */}
 
       {/* Other components that are always visible */}
+      <Header />
       <Index />
       <Car />
       <Garage />

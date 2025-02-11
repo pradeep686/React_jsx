@@ -9,7 +9,6 @@ function Header(){
     padding: "10px"
     }
 
-
     return  <>
     <h1 style={myStyle}>Vanakam da maplaa</h1>
     <h4>CSS la erunthu</h4>

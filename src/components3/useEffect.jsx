@@ -1,71 +1,55 @@
-import { useEffect , useState} from "react";
+import { useEffect, useState } from "react";
 
-function Timer(){
+function Timer() {
+  const [count, setCount] = useState(1);
+  const [timerState, setTimerState] = useState(false);
+  const [timer, setTimer] = useState(0);
 
-    const [count, setCount] = useState(1);
+  useEffect(() => {
+    console.log("Screen Rendered!");
 
+    setTimeout(() => {
+      setCount((prev) => prev + 1);
+    }, 1000);
+  }, []); // Run only once when the component mounts
 
-    useEffect(  ()  =>{
-        console.log('Screen Rendered!')
-        maxCount()
+  function updateCount() {
+    setCount((prev) => {
+      let newCount = prev + 1;
+      return newCount > 10 ? 1 : newCount;
+    });
+  }
 
-        setTimeout( ()  => {
-            setTime(   (previousState) => {
-                return previousState+1
-        })
-    }
-    ,1000)
-
-
-    },[count])
-
-
-    function maxCount(){
-        if(count>10){
-            setCount(1);
-        }
-    }
-
-   
-
-    function updateCount(){
-        setCount(  (previousState)  =>   { return previousState+1}   )
+  useEffect(() => {
+    let clock;
+    if (timerState) {
+      clock = setInterval(() => {
+        setTimer((prev) => prev + 1);
+      }, 1000);
     }
 
+    return () => clearInterval(clock); // Cleanup previous interval when `timerState` changes
+  }, [timerState]);
 
-    const [timerState, upTimer] = useState(false);
-    const [timer, timeCount] = useState(0);
+  function startTimer() {
+    setTimerState(true);
+  }
 
-    useEffect(  ()  =>  {
-        
-        let clock;
-        if(timerState){
-            clock = setInterval(  ()   =>   {
-           timeCount( (previousState)  => previousState+1)
-           },1000) 
-        }
+  function stopTimer() {
+    setTimerState(false);
+  }
 
-           return () => clearInterval(clock); // Cleanup previous interval when `timerState` changes
-        }, [timerState]);
+  return (
+    <>
+      <h3>Click the Button to Render the Page!</h3>
+      <h2>{count} times Rendered...</h2>
+      <button onClick={updateCount}>Render again</button>
 
- 
-
-    function setTimerON(){
-        upTimer(true);
-    }
-    
-    return <>
-            <h3>Click the Button to Render the Page!</h3>
-
-            <h2>{count} times Rendered...</h2>
-            <button  onClick={updateCount}>Render again</button>
-
-            <h2>Timer: {timer} Seconds</h2>
-           <button onClick={ setTimerON }>Start Timer</button>
+      <h2>Timer: {timer} Seconds</h2>
+      <button onClick={startTimer}>Start Timer</button>
+      <button onClick={stopTimer}>Stop Timer</button>
     </>
-
+  );
 }
-
-
 
 export default Timer;

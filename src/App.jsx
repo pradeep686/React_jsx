@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Index from './index.jsx';
+import Car from './components/leranClass';
+import Garage from './components/garage';
+import Header from './components/header.jsx';
+import Colour from './components2/useState.jsx';
+import Bick from './components2/bick.jsx';
+import List from './components2/list.jsx';
+import Timer from './components3/useEffect.jsx';
+import MyForm from './components4/form.jsx';
+import Home from './components5/home.jsx';
+import Contact from './components5/contect.jsx';
+import About from './components5/about.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      
+      
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Header /> {/* Common header for navigation */}
+
+      {/* Other components that are always visible */}
+      <Index />
+      <Car />
+      <Garage />
+      <Colour />
+      <Bick />
+      <List />
+      <Timer />
+      <MyForm />
+    </Router>
+  );
 }
 
-export default App
+export default App;

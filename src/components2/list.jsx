@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function List(){
+export default function List(){
 
     const[lists,setList] = useState(['Item1','Item2'])
     const [count,setCount] = useState(3)
@@ -23,4 +23,3 @@ function List(){
     </>
 }
 
-export default List;

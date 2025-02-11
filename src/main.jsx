@@ -1,14 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import Index from './index.jsx'
-import Car from './components/leranClass'//here the whole components folder is exdents..
-import Garage from './components/garage'
+
 import App from './App.jsx'
-import Header from './components/header.jsx'
-import Colour from './components2/useState.jsx'
-import Bick from './components2/bick.jsx'
-import List from './components2/list.jsx'
-import Timer from './components3/useEffect.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -16,13 +9,6 @@ createRoot(document.getElementById('root')).render(
   // It does not render anything in the UI but enables extra checks and warnings.
 //  /  -> Self Closing Tag <Error find and display on website...
 <StrictMode>
-    <Index/> 
-    <Car/>
-    <Garage/> 
-    <Header/>
-    <Colour/>
-    <Bick/>
-    <List/>
-    <Timer/>
+<App/>
   </StrictMode>
 )

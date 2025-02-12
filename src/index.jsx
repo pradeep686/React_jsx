@@ -8,6 +8,7 @@ function index(){
         <h3>Which is imported and render by main.jsx</h3>
         </>
     )
+    
 }
 
 export default index

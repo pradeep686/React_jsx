@@ -19,12 +19,18 @@ import NewBook from './components6/newBok.jsx';
 import Books from './components6/book.jsx';
 import Login from './components7/login.jsx';
 import Dashboard from './components7/dashboard.jsx';
+import Api from './components8/api.jsx';
+import Mainapi from './components8/main.jsx';
 
 function App() {
 
   return (<>
 
+
+
 {/* it will reload browser when it redirect */}
+
+
     <ul>
       <li><a href='/'>Home</a></li>
     </ul>
@@ -44,10 +50,12 @@ function App() {
       <li><Link to='/books/old_books'>Old Books</Link></li>
       <li><Link to='/books/new_books'>New Books</Link></li>
       <li><Link to='/login'>Login</Link></li>
+      <li><Link to='/api'>api</Link></li>
+      {/* Option to tell */}
       
     </ul>
       
-      
+
       <Routes>
 
 
@@ -64,6 +72,10 @@ function App() {
 
         <Route path='/login' element={<Login/>} />
         <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/api' element={<Api/>} />
+        <Route path='/mainapi' element={<Mainapi/>} />
+
+        {/* Mantitary if need to render */}
         
         </Routes>
         

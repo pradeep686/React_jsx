@@ -7,8 +7,9 @@ export default function List(){
 
     function addItem(){
         const itemName = 'Item'+count;
-        setList(  (previousState)    =>  { return [...previousState,itemName, ]  }  )
         setCount(  (previousState)  =>  previousState+1 )
+        setList(  (pre)    =>  { return [...pre,itemName, ]  }  )
+       
     }
 
     return <>

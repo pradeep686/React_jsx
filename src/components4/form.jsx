@@ -7,7 +7,7 @@ function MyForm(){
     const [name,setName] = useState("");
     console.log('current state..' + name);
 
-    const [values, setValue] = useState({Phone: "+91", country: "India", about: ""})
+    const [values, setValue] = useState({Phone: "+91", country: "India", about: ""})//object type
 
     function handeleSubmit(e){
          e.preventDefault();  //it not allow the browser to reload

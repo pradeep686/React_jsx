@@ -2,7 +2,7 @@ import './header.css'
 
 function Header(){
     
-    const myStyle = {
+    const myStle = {
     color: "white", 
     backgroundColor: "black",
     fontFamily: "Arial",
@@ -10,7 +10,7 @@ function Header(){
     }
 
     return  <>
-    <h1 style={myStyle}>Vanakam da maplaa</h1>
+    <h1 style={myStle}>Vanakam da maplaa</h1>
     <h4>CSS la erunthu</h4>
     </>
 }

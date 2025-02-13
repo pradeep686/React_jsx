@@ -1,6 +1,11 @@
-import React from "react";
+import React from 'react';
+import { Outlet } from "react-router-dom";
 
-export default function Books()
-{
-    return <h3>Main Book Page</h3>
+export default function Books() {
+  return (
+    <div>
+      <h2>Books</h2>     
+      <Outlet /> 
+    </div>
+  );
 }
